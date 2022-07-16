@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <title>IMC</title>
+    <link rel="stylesheet" href="/css/estilo.css" >
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS v5.2.0-beta1 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"  integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+     
+  <body>
+    <header>
+        <nav>
+            <a href="#"></i></a>
+        </nav>
+        <section class="textos-header">
+            <h1>Calcula tu Indice IMC</h1>
+        </section>
+        
+    </header> <p>
+    <div class="container">
+        <div class="row">
+            <form>
+                <div class="mb-3">
+                    <label for="Nombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" aria-describedby="emailHelp" required>
+               </div>
+               <div class="mb-3">
+                <label for="Peso" class="form-label">Peso(Kg)</label>
+                <input type="number" class="form-control" id="peso" required>
+                </div>
+               <div class="mb-3">
+                    <label for="Altura" class="form-label">Altura(Mts)</label>
+                    <input type="number" class="form-control" id="altura" required>
+               </div>
+            </form>
+           
+            <form name="fimc">
+                <div class="grid">
+                    <label for="IMC" class="form-label">Indice IMC</label>
+                    <div> <input class="form-control" id="IMC" readonly> </div> <p></p>
+                    <div> <input class="form-control" id="ustp" type="text"readonly> </div>
+                </div>
+            </form>
+        </div>
+        <!--Generar una interfaz para agregar datos a la base de datos-->
+        
+    </div>
+    <div class="container col-auto">
+        <p></p><button class="btn btn-outline-primary" onclick="calcularimc()">Calcular IMC</button>
+        <input class="btn btn-outline-danger" type="reset" onclick="limpiar()" value="Limpiar Datos">
+        <button id="boton" onclick="ver()" class="btn btn-outline-primary">Consultar</button>
+    </div>
+         <!--Generar una interfaz para consultar datos a la base de datos-->
+    <div class="container">
+        <ul id="lista">
+        </ul>
+        
+    </div>
+     
+           
+    
+    
+    <!-- Bootstrap JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+  </body>
+    <!--IMPORTAMOS A FIREBASE-->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <!--IMPORTAMOS SCRIPTS-->
+    <script src="js/configuracion.js"></script>
+    <script src="js/guardar.js"></script>
+    <script src="js/calcular.js"></script>
+</html>
